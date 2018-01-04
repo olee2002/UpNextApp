@@ -11,7 +11,11 @@ https://infinite-spire-33306.herokuapp.com/
 
 https://trello.com/b/EKDMgAyw/upnext-app
 
+## ERD
+![alt tag](https://github.com/olee2002/UpNextApp/blob/master/public/images/erd.jpg)
+
 
 ## Wire-frame
 
-![alt tag](https://github.com/olee2002/hangMan/blob/master/images/framework01.jpg)
+![alt tag](https://github.com/olee2002/UpNextApp/blob/master/public/images/wireframe01.jpg)
+![alt tag](https://github.com/olee2002/UpNextApp/blob/master/public/images/wireframe02.jpg)
