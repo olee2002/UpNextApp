@@ -23,7 +23,7 @@ mongoose.connection.on('error', (error) => {
 User.remove({})
     .then(() => {
         const olee = new User({
-            username: 'olee',
+            nickName: 'olee',
             email: 'olee@test.com',
             firstName: 'Okhyun',
             lastName: 'Lee',

@@ -3,11 +3,20 @@
 * {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
+  color:black
+  
 }
+
+
 
 body {
   background: ghostwhite;
-  padding: 40px;
+  padding:40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
 }
 
 .page-content {
@@ -43,7 +52,7 @@ h2 {
 /* Button */
 .button {
   border: 1px solid black;
-  max-width: 300px;
+  max-width: 200px;
   min-width: 150px;
   display: flex;
   justify-content: center;
@@ -247,9 +256,6 @@ h2 {
   padding: 40px;
   width: 100%;
   max-width: 900px;
-}
-
-.card-content {
 }
 
 /*

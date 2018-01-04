@@ -6,7 +6,7 @@ mongoose.Promise = global.Promise
 
 const UserSchema = new Schema(
     {
-        username: {
+        nickName: {
             type: String,
             required: [true, 'Username is required!']
         },
