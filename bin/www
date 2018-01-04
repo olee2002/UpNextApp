@@ -15,6 +15,11 @@ var http = require('http');
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
+//redirect to the /users page on load
+app.get('/', (req, res) => {
+  res.redirect('/users')
+})
+
 /**
  * Create HTTP server.
  */
