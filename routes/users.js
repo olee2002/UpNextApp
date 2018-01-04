@@ -15,4 +15,26 @@ router.get('/', (request, response) => {
       console.log(error)
     })
 })
+
+router.get('/new', (request, response) => {
+  response.render('users/new', { pageTitle: 'New User' })
+})
+
+router.post('/', (request, response) => {
+  const newUser = request.body
+  if(!newUser.photoUrl) {
+    newUser.photoUrl = 'http://www.fillmurray.com/g/300/300'
+  }
+
+  User.create(newUser)
+    .then(() => {
+      response.redirect('/users')
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
+
+
+
 module.exports = router;
