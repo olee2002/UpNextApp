@@ -1,5 +1,5 @@
 # UpNextApp
-This app helps you monitor your food prep time so you need to wait in line.
+This app helps you monitor your ordered food prep time so you don't need to wait in line.
 
 
 ## Link to Heroku to view the work
@@ -13,3 +13,5 @@ https://trello.com/b/EKDMgAyw/upnext-app
 
 
 ## Wire-frame
+
+![alt tag](https://github.com/olee2002/hangMan/blob/master/images/framework01.jpg)
