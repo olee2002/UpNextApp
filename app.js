@@ -33,6 +33,7 @@ app.set('view engine', 'hbs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(methodOverride('_method'))
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 //redirect to the /users page on load

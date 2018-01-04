@@ -63,24 +63,27 @@ router.get('/:userId/edit', (req, res) => {
       console.log(error)
     })
 })
-router.get('/:userId/delete', (request, response) => {
-  const userId = request.params.userId
 
-  User.findByIdAndRemove(userId)
-    .then(() => {
-      response.redirect('/users')
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-})
 router.put('/:userId', (req, res) => {
   const userId = req.params.userId
   const updatedUserInfo = req.body
 
-  User.findByIdAndUpdate(userId, updatedUserInfo, {new: true})
+  User.findByIdAndUpdate(userId, updatedUserInfo, {new: false})
     .then(() => {
       res.redirect(`/users/${userId}`)
+    })
+})
+
+
+router.get('/:userId/delete', (req, res) => {
+  const userId = req.params.userId
+
+  User.findByIdAndRemove(userId)
+    .then(() => {
+      res.redirect('/users')
+    })
+    .catch((error) => {
+      console.log(error)
     })
 })
 

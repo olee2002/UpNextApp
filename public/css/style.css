@@ -4,7 +4,8 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   color:black;
-  border:5px 5px black
+  border:5px 5px black;
+  text-decoration: none;
   
 }
 body {
@@ -63,7 +64,7 @@ h2 {
   align-items: center;
   height: 40px;
   transition: all 0.25s ease;
-  border-radius: 45%;
+  
   
 }
 
@@ -137,7 +138,7 @@ h2 {
   justify-content: center;
   flex-wrap: wrap;
   box-sizing: border-box;
-  padding: 40px 0;
+  padding: 30px 0;
 }
 
 .user-card {
@@ -186,12 +187,15 @@ h2 {
 
 .user-container {
   display: flex;
-  max-width: 750px;
+  flex-direction: column;
+  width: 200px;
 }
 
 .user-container img {
   height: 256px;
   width: 256px;
+  border-radius: 50%
+  
 }
 
 .user-info {
@@ -207,17 +211,19 @@ h2 {
 }
 
 .button-container .button {
-  margin: 0 30px 0 0;
+  margin: 0 20px 0 0;
 }
 
 .user-info .visit-store a {
   color: black;
   font-size: 2rem;
-  transition: all .25s ease
+  transition: all .25s ease;
+  text-decoration: none;
 }
 
 .user-info .visit-store a:hover{
   color: #e55934;
+  text-decoration: none;
 }
 
 /* Page header styles*/
