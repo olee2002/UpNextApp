@@ -35,7 +35,34 @@ router.post('/', (request, response) => {
     })
 })
 
+router.get('/:userId', (request, response) => {
+  const userId = request.params.userId
+  User.findById(userId)
+    .then((user) => {
+      response.render('users/show', {
+        user,
+        pageTitle: user.username
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
 
+router.get('/:userId/edit', (request, response) => {
+  const userId = request.params.userId
+
+  User.findById(userId)
+    .then((user) => {
+      response.render('users/edit', {
+        user,
+        pageTitle: 'Profile_Update'
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
 
 
 module.exports = router;
