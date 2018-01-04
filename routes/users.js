@@ -3,10 +3,10 @@ var router = express.Router();
 const User = require('../db/models/User')
 
 /* GET users listing. */
-router.get('/', (request, response) => {
+router.get('/', (req, res) => {
   User.find({})
     .then((users) => {
-      response.render('users/index', {
+      res.render('users/index', {
         users,
         pageTitle: 'Users'
       })
@@ -16,17 +16,57 @@ router.get('/', (request, response) => {
     })
 })
 
-router.get('/new', (request, response) => {
-  response.render('users/new', { pageTitle: 'New User' })
+router.get('/new', (req, res) => {
+  res.render('users/new', { pageTitle: 'New User' })
 })
 
-router.post('/', (request, response) => {
-  const newUser = request.body
+router.post('/', (req, res) => {
+  const newUser = req.body
   if(!newUser.photoUrl) {
     newUser.photoUrl = 'http://www.fillmurray.com/g/300/300'
   }
 
   User.create(newUser)
+    .then(() => {
+      res.redirect('/users')
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
+
+router.get('/:userId', (req, res) => {
+  const userId = req.params.userId
+  User.findById(userId)
+    .then((user) => {
+      res.render('users/show', {
+        user,
+        pageTitle: user.nickName
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
+
+router.get('/:userId/edit', (req, res) => {
+  const userId = req.params.userId
+
+  User.findById(userId)
+    .then((user) => {
+      res.render('users/edit', {
+        user,
+        pageTitle: 'Profile_Update'
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
+router.get('/:userId/delete', (request, response) => {
+  const userId = request.params.userId
+
+  User.findByIdAndRemove(userId)
     .then(() => {
       response.redirect('/users')
     })
@@ -34,33 +74,13 @@ router.post('/', (request, response) => {
       console.log(error)
     })
 })
+router.put('/:userId', (req, res) => {
+  const userId = req.params.userId
+  const updatedUserInfo = req.body
 
-router.get('/:userId', (request, response) => {
-  const userId = request.params.userId
-  User.findById(userId)
-    .then((user) => {
-      response.render('users/show', {
-        user,
-        pageTitle: user.username
-      })
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-})
-
-router.get('/:userId/edit', (request, response) => {
-  const userId = request.params.userId
-
-  User.findById(userId)
-    .then((user) => {
-      response.render('users/edit', {
-        user,
-        pageTitle: 'Profile_Update'
-      })
-    })
-    .catch((error) => {
-      console.log(error)
+  User.findByIdAndUpdate(userId, updatedUserInfo, {new: true})
+    .then(() => {
+      res.redirect(`/users/${userId}`)
     })
 })
 
