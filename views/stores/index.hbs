@@ -1,0 +1,24 @@
+<div class="stepper">
+    <a href="/users">Home</a> /
+    <a href="/users/{{userId}}">Profile</a> / Stores
+</div>
+
+<div class="store-header">
+    <h1>{{nickName}}'s Fav Restaurant(s)</h1>
+    <div class="button primary">
+        <a href="/users/{{userId}}/stores/new">Add a new store</a>
+    </div>
+</div>
+
+<div class="stores">
+    {{#each stores}}
+    <div class="store card">
+        <a class="cancel" href="/users/{{../userId}}/stores/{{this._id}}/delete">X</a>
+        <a href="/users/{{../userId}}/stores/{{this._id}}">
+        <img src = {{this.photoUrl}} alt="Image" class="indexfood">
+            <h3>{{this.name}}</h3>
+        </a>
+        <p>{{this.address}}</p>
+    </div>
+    {{/each}}
+</div>

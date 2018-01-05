@@ -5,16 +5,16 @@ mongoose.Promise = global.Promise
 
 const StoreSchema = new Schema(
     {
-        storeName: {
+        name: {
             type: String,
-            required: [true, 'Username is required!']
+            required: true, 
         },
-        location: {
+        address: {
             type: String
         },
         phoneNumber: {
             type: String,
-            required: [true, 'First name is required!']
+            required: true
         },
         photoUrl: {
             type: String,
