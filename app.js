@@ -7,6 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var mongoose = require('mongoose');
+
 mongoose.connect(process.env.MONGODB_URI);
 mongoose.connection.once('open', () => {
   console.log('Mongoose has connected to MongoDB!')
@@ -37,6 +38,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(methodOverride('_method'))
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
 //redirect to the /users page on load
 app.get('/', (req, res) => {
   res.redirect('/users')

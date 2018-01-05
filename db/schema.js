@@ -15,12 +15,6 @@ const ItemSchema = new Schema(
         price: {
             type: Number,
             required: true
-        },
-        orderedTime: {
-            type: Date
-        },
-        currentTime: {
-            type: Date
         }
     },
     {
