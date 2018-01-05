@@ -1,36 +1,44 @@
-<div class="stepper">
-    <a href="/users">Home</a> / Profile
-</div>
+<div class="container">
 
-<div class="visit-store">
-   
-    <a href="/users/{{user._id}}/stores"> <div class="button primary">STORES TO ORDER!</div></a>
-</div>
-
-<h1>{{user.firstName}} {{user.lastName}}</h1>
-<div class="user-container">
-    <div>
-        {{#if user.photoUrl}}
-        <img src="{{user.photoUrl}}" alt="{{user.nickName}}'s profile photo"> {{else}}
-        <img src="https://picsum.photos/200/300" alt="{{user.nickName}}'s profile photo"> {{/if}}
+    <div class="stepper">
+        <a href="/users">Home</a> / Profile
     </div>
-    <br>
-    <div>Nickname:
-
-        <strong>{{user.nickName}}</strong>
-        <br> Email:
-        <strong>{{user.email}}</strong>
+    <div class="user-container">
+        <div>
+            {{#if user.photoUrl}}
+            <img src="{{user.photoUrl}}" alt="{{user.nickName}}'s profile photo"> {{else}}
+            <img src="https://picsum.photos/200/300" alt="{{user.nickName}}'s profile photo"> {{/if}}
+        </div>
         <br>
-    </div>
-    <div class="user-info">
-        <div class="button-container">
-            <div class="button primary">
-                <a href="/users/{{user._id}}/edit">Update INFO</a>
+
+        <div class="user-info">
+
+            <div>Nickname:
+
+                <strong>{{user.nickName}}</strong>
+                <br> Email:
+                <strong>{{user.email}}</strong>
+                <br>
+                <br>
             </div>
 
+            <div class="button-container">
+                <div class="button primary">
+                    <a href="/users/{{user._id}}/edit">Update INFO</a>
+                </div>
 
-            <div class="button warning">
-                <a href="/users/{{user._id}}/delete">Delete ME</a>
+                <br>
+                <div class="button primary">
+                    <a href="/users/{{user._id}}/delete">Delete ME</a>
+                </div>
+
+                <br>
+                <div class="visit-store">
+
+                    <a href="/users/{{user._id}}/stores">
+                        STORES TO ORDER!
+                    </a>
+                </div>
             </div>
         </div>
     </div>

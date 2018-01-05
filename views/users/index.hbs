@@ -1,32 +1,31 @@
-<div class="index">
-    <div class="stepper">
-        <div id="title">Welcome to UpNext! </div>
-        <br>
-        <div> Choose a user to see the wait time.</div>
-    </div>
-
-
-
-    <div class="button primary">
-        <a href="/users/new">
-            Add New User
-        </a>
-
-    </div>
-
-    <div class="profile-card-container">
-        <div class="user-cards">
-            {{#each users}}
-            <a href="/users/{{this._id}}" class="link user-card">
-                <div class="user-image">
-                    {{#if this.photoUrl}}
-                    <img src="{{this.photoUrl}}" alt="{{this.nickName}}'s profile photo"> {{else}}
-                    <img src="https://picsum.photos/200/300" alt="{{this.nickName}}'s profile photo"> {{/if}}
-                </div>
-                <div class="profile-name">
-                    {{this.nickName}}
-                </div>
-            </a>
-            {{/each}}
+<div class="container">
+    <div class="food">
+        <div class="title">You're
+            <br>
+            <span class="youare"> 
+                <span class="color">Up</span>Next!</span>
         </div>
+    </div>
+
+
+<div class="button primary">
+    <a href="/users/new">
+        Add New User
+    </a>
+</div>
+<div class="profile-card-container">
+    <div class="user-cards">
+        {{#each users}}
+        <a href="/users/{{this._id}}" class="link user-card">
+            <div class="user-image">
+                {{#if this.photoUrl}}
+                <img src="{{this.photoUrl}}" alt="{{this.nickName}}'s profile photo"> {{else}}
+                <img src="https://picsum.photos/200/300" alt="{{this.nickName}}'s profile photo"> {{/if}}
+            </div>
+            <div class="profile-name">
+                {{this.nickName}}
+            </div>
+        </a>
+        {{/each}}
+    </div>
     </div>
