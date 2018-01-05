@@ -3,6 +3,31 @@ const Schema = mongoose.Schema
 
 mongoose.Promise = global.Promise
 
+const ItemSchema = new Schema(
+    {
+        name: {
+            type: String,
+            required: true, 
+        },
+        description: {
+            type: String
+        },
+        price: {
+            type: Number,
+            required: true
+        },
+        orderedTime: {
+            type: Date
+        },
+        currentTime: {
+            type: Date
+        }
+    },
+    {
+        timestamps: {},
+        usePushEach: true
+    })
+
 const StoreSchema = new Schema(
     {
         name: {
@@ -20,7 +45,7 @@ const StoreSchema = new Schema(
             type: String,
             default: 'https://cdn.vectorstock.com/i/thumb-large/66/69/santa-hat-vector-296669.jpg'
         },
-        // items: [ItemSchema]
+        items: [ItemSchema]
     },
     {
         timestamps: {},
@@ -59,6 +84,7 @@ const UserSchema = new Schema(
 
 module.exports = {
     UserSchema,
-    StoreSchema
+    StoreSchema,
+    ItemSchema
 
 }

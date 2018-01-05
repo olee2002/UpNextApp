@@ -1,0 +1,31 @@
+<div class="stepper">
+    <a href="/users">Home</a> /
+    <a href="/users/{{userId}}">Profile</a> /
+    <a href="/users/{{userId}}/stores">Stores</a> /
+    <a href="/users/{{userId}}/stores/{{store._id}}">{{store.name}}</a> / New Food
+</div>
+<div class="card">
+    <form action="/users/{{userId}}/stores/{{store._id}}/items" method="POST">
+        <h2>Time Left  </h2>
+        <div class="form-input">
+            <label for="name">Name</label>
+            <input type="text" name="name">
+        </div>
+        <div class="form-input">
+            <label for="description">Description</label>
+            <input type="text" name="description">
+        </div>
+        <div class="form-input">
+            <label for="price">Price</label>
+            <input type="number" name="price">
+        </div>
+        <div class="form-input">
+            <label for="orderedTime">Ordered Time</label>
+            <input type="time" name="OrderedTime">
+        </div>
+        <div class="button-container flex-end">
+            <input class="button primary" type="submit" value="Create Food">
+            <a href="/users/{{userId}}/stores/{{store._id}}" class="button primary">Cancel</a>
+        </div>
+    </form>
+</div>
