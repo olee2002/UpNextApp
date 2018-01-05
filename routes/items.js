@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router({ mergeParams: true })
-var moment = require('moment');
+const moment = require('moment')
+const timer = require('moment-timer')
 
 const User = require('../db/models/User')
 const Store = require('../db/models/Store')
@@ -55,13 +56,16 @@ router.get('/:itemId', (request, response) => {
         .then((user) => {
             const store = user.stores.id(storeId)
             const item = store.items.id(itemId)
-            const time = moment(item.createdAt).add(3,'days').format("dddd, MMMM Do YYYY");
-
+            const waitTime = item.waitTime
+            const orderTime = moment(item.createdAt).format("HH:mm (dddd, MMMM Do YYYY)")
+            
             response.render('items/show', {
                 userId,
                 store,
                 item,
-                time
+                waitTime,
+                orderTime
+                
             })
         })
         .catch((error) => {

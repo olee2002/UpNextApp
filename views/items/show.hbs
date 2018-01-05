@@ -1,8 +1,5 @@
 <div class="stepper">
-  <a href="/users">Home</a> /
-  <a href="/users/{{userId}}">Profile</a> /
-  <a href="/users/{{userId}}/stores">Stores</a> /
-  <a href="/users/{{userId}}/stores/{{store._id}}">{{store.name}}</a> / Food
+  <a href="/users">Home</a> /<a href="/users/{{userId}}">Profile</a> /<a href="/users/{{userId}}/stores">Stores</a> /<a href="/users/{{userId}}/stores/{{store._id}}">{{store.name}}</a> / Food
 </div>
 
 <div class="user-container">
@@ -13,8 +10,11 @@
     <h1>{{item.name}}</h1>
     <div>Description: {{item.description}}</div>
     <div>Price: ${{item.price}}</div>
-    <div>Ordered Time: {{time}}</div>
+    <div>Order Time: {{orderTime}}</div>
+    <div>Wait Time(mins): {{item.waitTime}}</div>
+    
  
     <a class="button primary" href="/users/{{userId}}/stores/{{store._id}}/items/{{item._id}}/delete">Delete</a>
   </div>
 </div>
+

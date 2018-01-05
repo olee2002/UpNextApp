@@ -15,6 +15,10 @@ const ItemSchema = new Schema(
         price: {
             type: Number,
             required: true
+        },
+        waitTime: {
+            type: Number,
+            required: true
         }
     },
     {
