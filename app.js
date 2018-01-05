@@ -21,6 +21,7 @@ mongoose.connection.on('error', (error) => {
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var stores = require('./routes/routes');
 
 var app = express();
 
@@ -42,6 +43,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/users', users);
+app.use('/users/:userId/stores', stores);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   var err = new Error('Not Found');
