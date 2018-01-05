@@ -1,8 +1,8 @@
 <div class="stepper">
-    <a href="/users">Home</a> /
-    <a href="/users/{{userId}}">Profile</a> /
-    <a href="/users/{{userId}}/stores">Stores</a> /
-    <a href="/users/{{userId}}/stores/{{store._id}}">{{store.name}}</a> / New Food
+    <a href="/users">Home</a> |
+    <a href="/users/{{userId}}">Profile</a> |
+    <a href="/users/{{userId}}/stores">Stores</a> |
+    <a href="/users/{{userId}}/stores/{{store._id}}">{{store.name}}</a> | New Food
 </div>
 <div class="card">
     <form action="/users/{{userId}}/stores/{{store._id}}/items" method="POST">
