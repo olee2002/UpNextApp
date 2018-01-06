@@ -1,22 +1,33 @@
 <div class="stepper">
-  <a href="/users">Home</a> |<a href="/users/{{userId}}">Profile</a> |<a href="/users/{{userId}}/stores">Stores</a> |<a href="/users/{{userId}}/stores/{{store._id}}">{{store.name}}</a> | Food
+  <a href="/users">Home</a> |
+  <a href="/users/{{userId}}">Profile</a> |
+  <a href="/users/{{userId}}/stores">Stores</a> |
+  <a href="/users/{{userId}}/stores/{{store._id}}">{{store.name}}</a> | Food
 </div>
 
 <div class="user-container">
-  <div class = "timer-container"> 
-    <p id = "timer">Timer<p>
+  <div class="timer-container">
+
   </div>
   <div class="user-info">
     <h1>{{item.name}}</h1>
+
+
+    <h2>Remaining Time:</h2>
+     <h2 id="timer">Timer</h2>
+    <div id="pause" class="button primary"> Pause </div>
+
+
     <div>Description: {{item.description}}</div>
     <div>Price: ${{item.price}}</div>
     <div>Order Time: {{orderTime}}</div>
-    <div>Wait Time(mins): {{item.waitTime}}</div>
+    <div>Wait Time(mins):
+      <span id="waitTime">{{item.waitTime}}</span>
+    </div>
     <div>Pick-Up Time:{{pickUpTime}} </div>
-    <div id="timer"> </div>
-    
- </div>
     <a class="button primary" href="/users/{{userId}}/stores/{{store._id}}/items/{{item._id}}/delete">Delete</a>
-  
-</div>
 
+  </div>
+
+
+</div>

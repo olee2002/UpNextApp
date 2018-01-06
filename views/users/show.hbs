@@ -9,7 +9,7 @@
             <img src="{{user.photoUrl}}" alt="{{user.nickName}}'s profile photo"> {{else}}
             <img src="https://picsum.photos/200/300" alt="{{user.nickName}}'s profile photo"> {{/if}}
         </div>
-            <div id="timer"></div>
+        <div id="timer"></div>
         <br>
 
         <div class="user-info">
@@ -24,6 +24,17 @@
             </div>
 
             <div class="button-container">
+
+
+
+                <div class="visit-store">
+
+                    <a href="/users/{{user._id}}/stores">
+                        <h2>{{user.nickName}}'s Fav Restaurant(s)</h2>
+                    </a>
+                </div>
+                <br>
+                <br>
                 <div class="button primary">
                     <a href="/users/{{user._id}}/edit">Update INFO</a>
                 </div>
@@ -31,14 +42,6 @@
                 <br>
                 <div class="button primary">
                     <a href="/users/{{user._id}}/delete">Delete ME</a>
-                </div>
-
-                <br>
-                <div class="visit-store">
-
-                    <a href="/users/{{user._id}}/stores">
-                        STORES TO ORDER!
-                    </a>
                 </div>
             </div>
         </div>
