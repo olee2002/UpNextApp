@@ -9,11 +9,11 @@
 }
 body {
   background: ghostwhite;
-  color:black;
 }
 .container{
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -33,11 +33,9 @@ body {
 }
 
 .food{
-  padding-top:25px;
+  padding-top:55px;
   width:100%;
   height:100%;
-  margin: 10px;
-  height: 70%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -48,7 +46,7 @@ body {
   color:rgb(3, 3, 3);
   text-shadow: 2px 2px rgba(0, 0, 0, 0.23);
   font-size: 6vh;
-  position: relative;
+  /* position: relative; */
   
 }
 
@@ -104,8 +102,8 @@ h2 {
 /* Button */
 .button {
   /* border: 2px solid black; */
-  max-width: 300px;
-  min-width: 200px;
+  max-width: 200px;
+  min-width: 185px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,14 +116,10 @@ h2 {
   transform:translateY(2px)
 }
 
-.button.warning:hover {
-  background: #e55934;
-}
-
 .button.primary {
   background: #ff6b51;
-  margin: 15px;
-  border:3px 3px white;
+  margin: 25px;
+
 }
 .button.primary,
 .button.primary a {
@@ -135,7 +129,7 @@ h2 {
 
 .button a {
   /* color: #5BC0EB; */
-  font-weight: 600;
+  font-weight: 700;
   /* text-decoration: none; */
 }
 
@@ -175,7 +169,7 @@ h2 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   padding: 20px 0;
 }
 
@@ -184,7 +178,7 @@ h2 {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   margin: 0px 20px;
   margin-bottom: 30px;
   background-color: white;
@@ -209,7 +203,7 @@ h2 {
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  background: white;
+  /* background: white; */
   box-shadow: 2px 3px rgba(0, 0, 0, 0.19)
 }
 
@@ -222,7 +216,7 @@ h2 {
 .user-container {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 400px;
 }
 
 .user-container img {
@@ -387,7 +381,7 @@ h2 {
   margin: 10px;
 }
 
-@media screen and (max-width: 650px) {
+/* @media screen and (max-width: 650px) {
   .user-container {
     flex-direction: column;
   }
@@ -395,4 +389,5 @@ h2 {
   .store-header {
     flex-direction: column;
   }
-}
+
+} */
