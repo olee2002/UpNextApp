@@ -58,14 +58,14 @@ router.get('/:itemId', (request, response) => {
             const item = store.items.id(itemId)
             const waitTime = item.waitTime
             const orderTime = moment(item.createdAt).format("HH:mm (dddd, MMMM Do YYYY)")
-            
+            const pickUpTime = moment(item.createdAt).add(waitTime,'m').format("HH:mm")
             response.render('items/show', {
                 userId,
                 store,
                 item,
                 waitTime,
-                orderTime
-                
+                orderTime,
+                pickUpTime
             })
         })
         .catch((error) => {

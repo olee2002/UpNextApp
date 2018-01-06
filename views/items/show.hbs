@@ -1,10 +1,10 @@
 <div class="stepper">
-  <a href="/users">Home</a> |<a href="/users/{{userId}}">Profile</a> /<a href="/users/{{userId}}/stores">Stores</a> /<a href="/users/{{userId}}/stores/{{store._id}}">{{store.name}}</a> / Food
+  <a href="/users">Home</a> |<a href="/users/{{userId}}">Profile</a> |<a href="/users/{{userId}}/stores">Stores</a> |<a href="/users/{{userId}}/stores/{{store._id}}">{{store.name}}</a> | Food
 </div>
 
 <div class="user-container">
-  <div>
-    <img src="https://placehold.it/256/256" alt="placeholder">
+  <div class = "timer-container"> 
+    <p id = "timer">Timer<p>
   </div>
   <div class="user-info">
     <h1>{{item.name}}</h1>
@@ -12,9 +12,11 @@
     <div>Price: ${{item.price}}</div>
     <div>Order Time: {{orderTime}}</div>
     <div>Wait Time(mins): {{item.waitTime}}</div>
+    <div>Pick-Up Time:{{pickUpTime}} </div>
+    <div id="timer"> </div>
     
- 
+ </div>
     <a class="button primary" href="/users/{{userId}}/stores/{{store._id}}/items/{{item._id}}/delete">Delete</a>
-  </div>
+  
 </div>
 
