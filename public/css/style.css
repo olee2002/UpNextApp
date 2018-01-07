@@ -14,15 +14,14 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .food::before {
   content : "";
   display: block;
   position: absolute;
-  top: 0;
-  left: 0;
+  /* top:0; */
   background-image: url(https://i.pinimg.com/736x/fb/09/2b/fb092bfd2808de0b49a0b5101abe0cd5--healthy-asian-recipes-healthy-desserts.jpg);
   background-size: cover;
   background-repeat:no-repeat;
@@ -33,7 +32,7 @@ body {
 }
 
 .food{
-  padding-top:55px;
+  
   width:100%;
   height:100%;
   display: flex;
@@ -43,6 +42,7 @@ body {
 }
 
 .title{
+  margin-top: 60px;
   color:rgb(3, 3, 3);
   text-shadow: 2px 2px rgba(0, 0, 0, 0.23);
   font-size: 6vh;
@@ -84,32 +84,25 @@ h2 {
   color: black;
 }
 
-/* Stepper */
-.stepper {
-  width:100vw;
-  height:10vh;
-  font-size: 2.5vh;
-  font-weight: 900;
-  /* align-self: flex-start; */
-  /* padding: 10px; */
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background: #4fbb40
-}
+
 
 /* Button */
 .button {
   /* border: 2px solid black; */
-  max-width: 200px;
-  min-width: 185px;
+  width: 200px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
+  
+  
   transition: all 0.25s ease;  
+}
+.primary {
+  background: #ff6b51;
+  margin: 25px;
+  color: white;
+  font-size: 2.5vh;
 }
 
 .button.primary:hover {
@@ -117,39 +110,7 @@ h2 {
   transform:translateY(2px)
 }
 
-.button.primary {
-  background: #ff6b51;
-  margin: 25px;
 
-}
-.button.primary,
-.button.primary a {
-  color: white;
-  text-decoration: none;
-}
-
-.button a {
-  /* color: #5BC0EB; */
-  font-weight: 700;
-  /* text-decoration: none; */
-}
-
-/* Links / Buttons (specifically anchor tag links right now) */
-.link-button {
-  color: white;
-  background-color: darkgreen;
-  border-radius: 2px;
-  padding: 15px 30px;
-  text-align: center;
-  width: 80px;
-  margin-bottom: 15px;
-  text-decoration: none;
-}
-
-.link {
-  text-decoration: none;
-  color: black;
-}
 
 /* Users INDEX page styles */
 
@@ -188,7 +149,6 @@ h2 {
   width: 22vh;
   height: 22vh;
   font-weight: bold;
-  color: black;
   text-align: center;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.23);
   transition: all 0.25s ease;
@@ -234,24 +194,25 @@ h2 {
   justify-content: center;
 }
 
-.button-container .button {
-  margin: 0 0px 0 0;
-}
 
-.user-info .visit-store a {
-  color: black;
+.user-info{
   font-size: 1.5rem;
   transition: all .25s ease;
   text-decoration: none;
   
 }
-
-
-
-.user-info .visit-store a:hover{
+/* .user-info a:hover{
   color: #e55934;
   text-decoration: none;
+} */
+
+.storePage {
+  background: #54c045;
+  color:white;
+  width:35vw;
+
 }
+
 
 /* foodphotos index */
 .indexfood{
@@ -271,22 +232,8 @@ h2 {
   justify-content: center;
 }
 
-/*
- Global nav
-*/
 
-.global-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  height: 70px;
-}
 
-.global-nav img {
-  height: 50px;
-  width: 50px;
-}
 
 /* Card styles */
 
@@ -324,23 +271,8 @@ h2 {
   width: 100px;
 }
 
-.flex-end {
-  justify-content: flex-end;
-}
 
 /* Store Show */
-.store-header,
-.stores,
-.item-header,
-.items {
-  width: 75%;
-  height: 60%;
-  min-width: 650px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap
-}
 
 .store.card {
   display: flex;
@@ -349,7 +281,7 @@ h2 {
   justify-content: center;
   align-items: center;
   height:50%;
-  width: 30%;
+  width: 50%;
   min-width: 125px;
   background: white;
   padding: 10px;
@@ -360,13 +292,13 @@ h2 {
 .store.card .cancel {
   align-self: flex-end;
   text-decoration: none;
-  font-size: 1.35rem;
+  
 }
 
 .item-header h3 {
   font-family: "Rubik";
   font-weight: 500;
-  font-size: 1.55rem;
+  
 }
 
 .items {
@@ -390,3 +322,25 @@ h2 {
   }
 
 } */
+
+/* Stepper */
+.stepper {
+  width:100vw;
+  height:10vh;
+  color:white;
+  font-size: 2.5vh;
+  font-weight: 900;
+  /* align-self: flex-start; */
+  /* padding: 10px; */
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #54c045
+}
+
+a{
+  color:white;
+  font-size: 2.35vh;
+}
