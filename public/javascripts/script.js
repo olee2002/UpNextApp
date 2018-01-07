@@ -27,6 +27,8 @@ $(document).ready(() => {
         }
     }
 
+
+    
     const foodTimer = setInterval(timeIt, 1000)
 
     $('#pause').on('click', () => { audio.pause() })
