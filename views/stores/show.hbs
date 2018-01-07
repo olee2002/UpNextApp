@@ -18,20 +18,23 @@
 
         </div>
         <div class="storePage">
+            <div class="buttons">
+
+                <a class="button primary" href="/users/{{userId}}/stores/{{store._id}}/items/new">Add Order</a>
+                <br>
+                <a class="button primary" href="/users/{{userId}}/stores/{{store._id}}/delete">Delete Store</a>
+            </div>
             {{#each store.items}}
 
             <a href="/users/{{../userId}}/stores/{{../store._id}}/items/{{this._id}}">
-                {{this.name}}
+                <div class="ordername">{{this.name}} </div>
             </a>
-
-            {{/each}}
         </div>
-        <div class="gift-header">
+        {{/each}}
 
-            <a class="button primary" href="/users/{{userId}}/stores/{{store._id}}/items/new">Add Order</a>
-            <br>
-            <a class="button primary" href="/users/{{userId}}/stores/{{store._id}}/delete">Delete Store</a>
-        </div>
+
     </div>
+
+</div>
 </div>
 </div>
