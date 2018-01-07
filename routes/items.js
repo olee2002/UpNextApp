@@ -57,8 +57,8 @@ router.get('/:itemId', (request, response) => {
             const store = user.stores.id(storeId)
             const item = store.items.id(itemId)
             const waitTime = item.waitTime
-            const orderTime = moment(item.createdAt).format("HH:mm (dddd, MMMM Do YYYY)")
-            const pickUpTime = moment(item.createdAt).add(waitTime,'m').format("HH:mm")
+            const orderTime = moment(item.createdAt).format("hh:mm A (dddd, MMMM Do YYYY)")
+            const pickUpTime = moment(item.createdAt).add(waitTime,'m').format("hh:mm A")
             response.render('items/show', {
                 userId,
                 store,
