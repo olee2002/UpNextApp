@@ -1,6 +1,10 @@
 
 $(document).ready(() => {
     console.log('Script Connected')
+    $(function () {
+        $('.tlt').textillate();
+    })
+
     let counter = 0
     // let timeLeft = 5
 
@@ -28,9 +32,12 @@ $(document).ready(() => {
     }
 
 
-    
+
     const foodTimer = setInterval(timeIt, 1000)
 
     $('#pause').on('click', () => { audio.pause() })
+
+
+
 
 })
