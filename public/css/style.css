@@ -207,17 +207,16 @@ h2 {
 }
 
 
-.ordername {
+.boxname {
   width: 100%;
-  height: 8vh;
+  height: 7vh;
   background: #54c045;
   color:white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 3vh;
-  margin:10px 0 10px 0;
+  margin:10px 0 5px 0;
   /* padding-left:3vh; */
 }
 
@@ -362,8 +361,8 @@ a:hover {
 }
 
 .orderInfo{
-  width:500px;
-  height:170px;
+  width:100%;
+  height:8vh;
 
 }
 
