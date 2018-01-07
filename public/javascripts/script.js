@@ -7,8 +7,8 @@ $(document).ready(() => {
     function convertSeconds(s) {
         var min = (Math.floor(s / 60)).toString()
         var sec = s % 60
-          return min + ':' + sec
-       
+        return min + ':' + sec
+
     }
     const timer = $('#timer')
     timer.html(counter)
@@ -19,12 +19,12 @@ $(document).ready(() => {
         console.log(timeLeft)
         counter++
         timer.html(convertSeconds(timeLeft - counter))
-        if (counter===timeLeft) {
+        if (counter === timeLeft) {
             $('#timer').html('Your food is ready!')
             audio.play()
             audio.loop = true
             clearInterval(foodTimer)
-        } 
+        }
     }
 
     const foodTimer = setInterval(timeIt, 1000)
