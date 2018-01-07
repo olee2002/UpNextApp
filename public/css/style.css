@@ -25,7 +25,7 @@ body {
   left:0;
   right:0;
   bottom:0;
-  background-image: url(https://i.pinimg.com/736x/fb/09/2b/fb092bfd2808de0b49a0b5101abe0cd5--healthy-asian-recipes-healthy-desserts.jpg);
+  background-image: linear-gradient(transparent,transparent,white),url(https://i.pinimg.com/736x/fb/09/2b/fb092bfd2808de0b49a0b5101abe0cd5--healthy-asian-recipes-healthy-desserts.jpg);
   background-size: cover;
   background-repeat:no-repeat;
   width: 100%;
