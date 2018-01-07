@@ -25,11 +25,11 @@
             <a href="/users/{{this._id}}" class="link user-card">
                 <div class="user-image">
                     {{#if this.photoUrl}}
-                    <img src="{{this.photoUrl}}" alt="{{this.nickName}}'s profile photo"> {{else}}
-                    <img src="https://picsum.photos/200/300" alt="{{this.nickName}}'s profile photo"> {{/if}}
+                    <img class ="userimg" src="{{this.photoUrl}}" alt="{{this.nickName}}'s profile photo"> {{else}}
+                    <img class ="userimg" src="https://picsum.photos/200/300" alt="{{this.nickName}}'s profile photo"> {{/if}}
                 </div>
-                {{/each}}
-                {{!-- <div class="profile-name">
+                {{/each}} {{!--
+                <div class="profile-name">
                     {{this.nickName}}
                 </div> --}}
 

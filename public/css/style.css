@@ -139,14 +139,12 @@ h2 {
   margin: 50px
 }
 
-.user-card, img {
+.user-card, .userimg {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   /* box-sizing: border-box; */
-  
- 
   background-color: rgb(223, 223, 223);
   width: 22vh;
   height: 22vh;
