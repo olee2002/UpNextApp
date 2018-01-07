@@ -1,13 +1,13 @@
 <div class="container">
     <div class="food">
         <div class="title tlt" data-in-effect="rollIn">You're</div>
-            <br>
-            <div class="youare">
-                <div class="color animated infinite pulse">Up</div> 
+        <br>
+        <div class="youare">
+            <div class="color animated infinite pulse">Up</div>
 
-                <span class="tlt" data-in-effect="rollIn">Next!</span> 
-            </div>
-        
+            <span class="tlt" data-in-effect="rollIn">Next!</span>
+        </div>
+
     </div>
 
 
@@ -28,11 +28,12 @@
                     <img src="{{this.photoUrl}}" alt="{{this.nickName}}'s profile photo"> {{else}}
                     <img src="https://picsum.photos/200/300" alt="{{this.nickName}}'s profile photo"> {{/if}}
                 </div>
-                <div class="profile-name">
+                {{/each}}
+                {{!-- <div class="profile-name">
                     {{this.nickName}}
-                </div>
+                </div> --}}
 
             </a>
-            {{/each}}
+
         </div>
     </div>
