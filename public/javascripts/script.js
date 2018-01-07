@@ -1,38 +1,34 @@
-$(document).ready(() => {
 
+$(document).ready(() => {
+    console.log('Script Connected')
     let counter = 0
-    let timeLeft = parseInt(($('#waitTime').html())*60)
-    console.log($('#waitTime').html())
-    console.log(timeLeft)
+    // let timeLeft = 5
+
     function convertSeconds(s) {
         var min = (Math.floor(s / 60)).toString()
         var sec = s % 60
-        if (min.length < 2) {
-            // min = parseInt(`${0 + min}`)
-            return '0' + min + ':' + sec
-        }
+          return min + ':' + sec
+       
     }
     const timer = $('#timer')
     timer.html(counter)
     var audio = new Audio('/audio/ding.mp3')
 
     function timeIt() {
+        let timeLeft = parseInt(($('#waitTime').html()) * 60)
+        console.log(timeLeft)
         counter++
         timer.html(convertSeconds(timeLeft - counter))
-        if (counter === timeLeft) {
+        if (counter===timeLeft) {
             $('#timer').html('Your food is ready!')
             audio.play()
             audio.loop = true
-        }
+            clearInterval(foodTimer)
+        } 
     }
 
-    setInterval(timeIt, 1000)
-    console.log(timeLeft)
+    const foodTimer = setInterval(timeIt, 1000)
+
     $('#pause').on('click', () => { audio.pause() })
-
-
-
-
-
 
 })
