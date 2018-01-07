@@ -19,8 +19,7 @@
       <h2 id="timer">Timer</h2>
       <div id="pause" class="button primary"> Stop "Ding" </div>
       <br>
-      <br>
-      <br>
+
       <div class="orderInfo">
         <div>Description: {{item.description}}</div>
         <div>Price: ${{item.price}}</div>
@@ -30,9 +29,9 @@
         </div>
         <div>Pick-Up Time:{{pickUpTime}} </div>
         <br>
-      </div>
-      <a class="button primary" href="/users/{{userId}}/stores/{{store._id}}/items/{{item._id}}/delete">Delete</a>
 
+        <a class="button primary" href="/users/{{userId}}/stores/{{store._id}}/items/{{item._id}}/delete">Delete</a>
+      </div>
     </div>
   </div>
 

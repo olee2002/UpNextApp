@@ -88,8 +88,9 @@ h2 {
 /* Button */
 .button {
   /* border: 2px solid black; */
-  width: 200px;
-  height: 40px;
+  
+  width: 22vh;
+  height: 6vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,8 +207,8 @@ h2 {
 
 
 .storePage {
-  width: 250px;
-  height: 60px;
+  width: 23vh;
+  height: 8vh;
   background: #54c045;
   color:white;
   display: flex;
@@ -215,7 +216,8 @@ h2 {
   justify-content: center;
   align-items: center;
   font-size: 5vh;
-  margin:15px 0 15px 0
+  margin:15px 0 15px 0;
+  padding-left:3vh;
 }
 
 
@@ -274,8 +276,8 @@ h2 {
 }
 
 .stores img{
-  width: 75%;
-  height: 75%;
+  width: 80%;
+  height: 80%;
 }
 .store.card {
   border: 1px solid black;
@@ -283,9 +285,9 @@ h2 {
   justify-content: center;
   color:black;
   align-items: center;
-  height:200px;
-  width: 200px;
-  min-width: 125px;
+  height:20vh;
+  /* width: 20vh; */
+  
   background: white;
   padding: 15px;
   text-align: center;
@@ -298,8 +300,8 @@ h2 {
 }
 
 .store.card img{
-  width: 150px;
-  height: 150px;
+  width: 13vh;
+  height: 13vh;
   /* margin:20px */
 }
 .store.card a{
