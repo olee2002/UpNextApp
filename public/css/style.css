@@ -14,14 +14,17 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 .food::before {
   content : "";
   display: block;
   position: absolute;
-  /* top:0; */
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
   background-image: url(https://i.pinimg.com/736x/fb/09/2b/fb092bfd2808de0b49a0b5101abe0cd5--healthy-asian-recipes-healthy-desserts.jpg);
   background-size: cover;
   background-repeat:no-repeat;
@@ -55,6 +58,7 @@ body {
   color:rgb(27, 27, 27);
   font-weight: 600;
   text-shadow: 3px 3px rgba(32, 32, 32, 0.23);
+  margin-bottom: 30px;
 }
 
 .color{
@@ -69,20 +73,15 @@ body {
 }
 
 h1 {
-  font-family: "Rubik";
   font-weight: 700;
 }
 
 h2 {
   margin: 0px;
   margin-bottom: 30px;
+  font-weight: 500;
 }
 
-.app-name{
-  font-size: 1.55rem;
-  text-decoration: none;
-  color: black;
-}
 
 
 
@@ -94,13 +93,13 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  font-family: 'Montserrat', sans-serif;
   
   transition: all 0.25s ease;  
 }
 .primary {
   background: #ff6b51;
-  margin: 25px;
+  /* margin: 25px; */
   color: white;
   font-size: 2.5vh;
 }
@@ -144,7 +143,7 @@ h2 {
   align-items: center;
   /* box-sizing: border-box; */
   
-  margin: 15px;
+ 
   background-color: rgb(223, 223, 223);
   width: 22vh;
   height: 22vh;
@@ -153,6 +152,10 @@ h2 {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.23);
   transition: all 0.25s ease;
   border-radius: 50%
+}
+
+.user-card{
+  margin: 15px;
 }
 
 .user-card:hover {
@@ -182,11 +185,18 @@ h2 {
 }
 
 .user-info {
-  margin-left: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 2.5vh;
+  transition: all .25s ease;
+  text-decoration: none;
 }
+.userInput{
+  font-size: 2.5vh;
+}
+
+
 
 .button-container {
   display: flex;
@@ -195,22 +205,17 @@ h2 {
 }
 
 
-.user-info{
-  font-size: 1.5rem;
-  transition: all .25s ease;
-  text-decoration: none;
-  
-}
-/* .user-info a:hover{
-  color: #e55934;
-  text-decoration: none;
-} */
-
 .storePage {
+  width: 250px;
+  height: 60px;
   background: #54c045;
   color:white;
-  width:35vw;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vh;
+  margin:15px 0 15px 0
 }
 
 
@@ -234,20 +239,6 @@ h2 {
 
 
 
-
-/* Card styles */
-
-.card {
-  display: flex;
-  flex-direction: column;
-  background: white;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 40px;
-  width: 100%;
-  max-width: 900px;
-}
 
 /*
     Form styles
@@ -273,55 +264,64 @@ h2 {
 
 
 /* Store Show */
-
-.store.card {
+.stores{
   display: flex;
-  flex-wrap: wrap;
-  align-content: center;
   justify-content: center;
   align-items: center;
-  height:50%;
-  width: 50%;
+  flex-wrap: wrap;
+  margin:10px;
+  margin-bottom: 20px
+}
+
+.stores img{
+  width: 75%;
+  height: 75%;
+}
+.store.card {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  color:black;
+  align-items: center;
+  height:200px;
+  width: 200px;
   min-width: 125px;
   background: white;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-
-.store.card .cancel {
-  align-self: flex-end;
-  text-decoration: none;
+.store.card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   
+  transform:translateY(5px)
 }
 
-.item-header h3 {
-  font-family: "Rubik";
-  font-weight: 500;
-  
+.store.card img{
+  width: 150px;
+  height: 150px;
+  /* margin:20px */
 }
-
-.items {
+.store.card a{
+  color:black
+}
+.store-header{
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
+  
+}
+.store-header img{
+  width: 350px;
+  height:275px;
+  border-radius: 0%
 }
 
-.item {
-  margin: 10px;
+.cancel {
+  align-self: flex-start;
+  text-decoration: none;
+  color:black;
 }
-
-/* @media screen and (max-width: 650px) {
-  .user-container {
-    flex-direction: column;
-  }
-
-  .store-header {
-    flex-direction: column;
-  }
-
-} */
 
 /* Stepper */
 .stepper {
@@ -344,3 +344,24 @@ a{
   color:white;
   font-size: 2.35vh;
 }
+
+a:hover {
+  transform:translateY(1px)
+}
+
+.orderInfo{
+  width:500px;
+  height:170px;
+
+}
+
+/* @media screen and (max-width: 650px) {
+  .user-container {
+    flex-direction: column;
+  }
+
+  .store-header {
+    flex-direction: column;
+  }
+
+} */

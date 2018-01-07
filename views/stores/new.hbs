@@ -1,36 +1,40 @@
-<div class="stepper">
-    <a href="/users">Home</a> /
-    <a href="/users/{{userId}}">Profile</a> /
-    <a href="/users/{{userId}}/stores">Stores</a> / New Store
-</div>
+<div class="food">
 
-<div class="card">
+    <div class="stepper">
+        <a href="/users">Home</a> /
+        <a href="/users/{{userId}}">Profile</a> /
+        <a href="/users/{{userId}}/stores">Stores</a> / New Store
+    </div>
 
-    <h3>Add A New Store:</h3>
-    <div>
-        <form action="/users/{{userId}}/stores" method="POST">
-            <div class="form-input">
-                <label for="name">Store Name:</label>
-                <input type="text" name="name" required>
-            </div>
 
-            <div class="form-input">
-                <label for="address">Store Address:</label>
-                <input type="text" name="address">
-            </div>
-            <div class="form-input">
-                <label for="phoneNumber">Phone Number:</label>
-                <input type="text" name="phoneNumber">
-            </div>
-            <div class="form-input">
-                <label for="photoUrl">Photo Url</label>
-                <input type="text" name="photoUrl" />
-            </div>
+    <div class="card">
 
-            <div class="button-container flex-end">
-                <input class="button primary" type="submit" value="Create Store">
-                <a href="/users/{{user._id}}" class="button primary">Cancel</a>
-            </div>
-        </form>
+        <h3>Add A New Store:</h3>
+        <div>
+            <form action="/users/{{userId}}/stores" method="POST">
+                <div class="form-input">
+                    <label for="name">Store Name:</label>
+                    <input type="text" name="name" required>
+                </div>
+
+                <div class="form-input">
+                    <label for="address">Store Address:</label>
+                    <input type="text" name="address">
+                </div>
+                <div class="form-input">
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="text" name="phoneNumber">
+                </div>
+                <div class="form-input">
+                    <label for="photoUrl">Photo Url</label>
+                    <input type="text" name="photoUrl" />
+                </div>
+
+                <div class="button-container flex-end">
+                    <input class="button primary" type="submit" value="Create Store">
+                    <a href="/users/{{user._id}}" class="button primary">Cancel</a>
+                </div>
+            </form>
+        </div>
     </div>
 </div>

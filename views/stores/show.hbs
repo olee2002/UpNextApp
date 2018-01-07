@@ -1,36 +1,37 @@
-<div class="stepper">
-    <a href="/users">Home</a> |
-    <a href="/users/{{userId}}">Profile</a> |
-    <a href="/users/{{userId}}/stores">Stores</a> | {{store.name}}
-</div>
+<div class="food container">
 
-<div class="store-header">
-    <div>
-        <h1>{{store.name}}</h1>
-        <h4>{{store.address}}</h4>
-        <h4>{{store.phoneNumber}}</h4>
-        {{!-- <h3><img src = {{store.photoUrl}}></h3> --}}
+
+    <div class="stepper">
+        <a href="/users">Home</a> |
+        <a href="/users/{{userId}}">Profile</a> |
+        <a href="/users/{{userId}}/stores">Stores</a> | {{store.name}}
     </div>
-    
+
+    <div class="store-header">
+        <div>
+            <h1>{{store.name}}</h1>
+            <h4>{{store.address}}</h4>
+            <h4>{{store.phoneNumber}}</h4>
 
 
+            <img src={{store.photoUrl}}>
 
-    
-
-    <div class="items">
-         <h3>Ordered Food:</h3>
-        {{#each store.items}}
-        <div class="gift">
-            <a href="/users/{{../userId}}/stores/{{../store._id}}/items/{{this._id}}">
-               <h2>{{this.name}}</h2> 
-            </a>
         </div>
-        {{/each}}
-    
-<div class="gift-header">
-       
-        <a class="button primary" href="/users/{{userId}}/stores/{{store._id}}/items/new">Add Order</a>
-    <a class="button primary" href="/users/{{userId}}/stores/{{store._id}}/delete">Delete Store</a>
+        <div class="storePage">
+            {{#each store.items}}
+
+            <a href="/users/{{../userId}}/stores/{{../store._id}}/items/{{this._id}}">
+                {{this.name}}
+            </a>
+
+            {{/each}}
+        </div>
+        <div class="gift-header">
+
+            <a class="button primary" href="/users/{{userId}}/stores/{{store._id}}/items/new">Add Order</a>
+            <br>
+            <a class="button primary" href="/users/{{userId}}/stores/{{store._id}}/delete">Delete Store</a>
+        </div>
     </div>
 </div>
 </div>
