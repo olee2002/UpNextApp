@@ -170,7 +170,7 @@ h2 {
 .user-cards {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   /* box-sizing: border-box; */
   margin: 50px
@@ -183,7 +183,7 @@ h2 {
   align-items: center;
   /* box-sizing: border-box; */
   
-  margin: 10px;
+  margin: 15px;
   background-color: rgb(223, 223, 223);
   width: 22vh;
   height: 22vh;
