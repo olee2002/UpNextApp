@@ -8,15 +8,17 @@
   </div>
 
   <div class="user-container">
-    <div class="timer-container">
+    
+      <div class="timer-container">
 
-    </div>
+      </div>
+    </strong>
     <div class="user-info">
       <h1>{{item.name}}</h1>
 
 
-      <h2>Remaining Time:</h2>
-      <h2 id="timer">Timer</h2>
+      <h3>Remaining Time:</h3>
+      <h1 id="timer">Timer</h1>
       <div id="pause" class="button primary"> Stop "Ding" </div>
       <br>
 
@@ -27,7 +29,7 @@
         <div>Wait Time(mins):
           <span id="waitTime">{{item.waitTime}}</span>
         </div>
-        <div>Pick-Up Time:{{pickUpTime}} </div>
+       <h3><div>Pick-Up Time:{{pickUpTime}} </div></h3> 
         <br>
 
         <a class="button primary" href="/users/{{userId}}/stores/{{store._id}}/items/{{item._id}}/delete">Delete</a>
