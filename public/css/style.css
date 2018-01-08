@@ -99,9 +99,9 @@ h2 {
 .button {
   /* border: 2px solid black; */
   
-  width: 22vh;
-  min-width: 22vh;
-  height: 6vh;
+  width: 18vh;
+  min-width: 15vh;
+  height: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -270,7 +270,7 @@ img{
 
 .buttons{
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   justify-content: flex-start;
   align-items: space-between;
   margin: 10px;
@@ -349,9 +349,9 @@ img{
 }
 .store-header{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* align-items: center */
+  /* flex-direction: column; */
+  justify-content: flex-start;
+  align-items: flex-end
   
 }
 .store-header img{
@@ -359,7 +359,10 @@ img{
   height:20vh;
   border-radius: 20%;
 }
-
+.storePage{
+  width: 80%;
+  height: 30%
+}
 .cancel {
   align-self: flex-start;
   text-decoration: none;
@@ -419,6 +422,15 @@ a:hover {
   justify-content: center;
   align-items: center;
   width: 80%;
+}
+
+.newOrder{
+  width: 60%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 }
 /* @media screen and (max-width: 650px) {
   .user-container {
