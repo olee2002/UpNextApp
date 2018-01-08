@@ -100,6 +100,7 @@ h2 {
   /* border: 2px solid black; */
   
   width: 22vh;
+  min-width: 22vh;
   height: 6vh;
   display: flex;
   justify-content: center;
@@ -306,6 +307,7 @@ img{
 /* Store Show */
 .stores{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -313,18 +315,16 @@ img{
   margin-bottom: 20px
 }
 
-.stores img{
-  width: 80%;
-  height: 80%;
-}
 .store.card {
   border: 1px solid black;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   color:black;
   align-items: center;
   height:20vh;
-  /* width: 20vh; */
+  width: 35vh;
+  margin:10px;
   
   background: white;
   padding: 15px;
@@ -373,7 +373,7 @@ img{
   font-weight: 900;
   /* align-self: flex-start; */
   /* padding: 10px; */
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -384,7 +384,7 @@ img{
 
 a{
   color:white;
-  font-size: 2.35vh;
+  font-size: 2vh;
 }
 
 a:hover {
@@ -399,10 +399,25 @@ a:hover {
 }
 
 .boxInfo{
-  width: 90%
+  width: 100%
 }
-
-
+.item-info {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  font-size: 2.5vh;
+  transition: all .25s ease;
+  text-decoration: none;
+}
+.item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
 /* @media screen and (max-width: 650px) {
   .user-container {
     flex-direction: column;
