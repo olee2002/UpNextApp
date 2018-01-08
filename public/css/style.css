@@ -432,6 +432,10 @@ a:hover {
   justify-content: flex-end;
   align-items: center;
 }
+
+#pause{
+  display:none
+}
 /* @media screen and (max-width: 650px) {
   .user-container {
     flex-direction: column;

@@ -28,6 +28,7 @@ $(document).ready(() => {
             audio.play()
             audio.loop = true
             clearInterval(foodTimer)
+            $('#pause').css('display','flex')
         }
     }
 
