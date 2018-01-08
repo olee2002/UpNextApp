@@ -161,9 +161,13 @@ h2 {
   text-align: center;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.23);
   transition: all 0.25s ease;
-  border-radius: 50%
+  border-radius: 50%;
+ 
 }
 
+.userimg{
+  border:1px solid white
+}
 .user-card{
   margin: 15px;
 }
