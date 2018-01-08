@@ -13,8 +13,10 @@
             <h3>{{store.address}}</h3>
             <h3>{{store.phoneNumber}}</h3>
 
-
-            <img src={{store.photoUrl}}>
+            {{#if store.photoUrl}}
+            <img src="{{store.photoUrl}}" alt="{{store.name}}'s photo"> {{else}}
+            <img src="http://assets.nydailynews.com/polopoly_fs/1.3738067.1515100640!/img/httpImage/image.jpg_gen/derivatives/index_450/foods-2018.jpg" alt="{{store.name}}'s photo"> {{/if}}
+            {{!-- <img src={{store.photoUrl}}> --}}
 
         </div>
         <div class="storePage">
@@ -29,9 +31,9 @@
             <a href="/users/{{../userId}}/stores/{{../store._id}}/items/{{this._id}}">
                 <div class="boxname">{{this.name}} </div>
             </a>
-             {{/each}}
+            {{/each}}
         </div>
-       
+
 
 
     </div>

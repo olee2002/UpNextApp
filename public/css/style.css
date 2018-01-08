@@ -12,7 +12,7 @@
   font-size: 1.5vh;
   margin-left: 10px; 
   margin-top: 8px;
-  position:fixed;
+  position:absolute;
 
  }
 body {
@@ -323,8 +323,8 @@ img{
   flex-direction: column;
   justify-content: center;
   color:black;
-  align-items: center;
-  height:20vh;
+  align-items: flex-start;
+  height:17.5vh;
   width: 35vh;
   margin:10px;
   
@@ -340,7 +340,7 @@ img{
 }
 
 .store.card img{
-  width: 13vh;
+  width: 15vh;
   height: 13vh;
   /* margin:20px */
 }
@@ -367,6 +367,8 @@ img{
   align-self: flex-start;
   text-decoration: none;
   color:black;
+  position: relative;
+  font-size: 2.5vh;
 }
 
 /* Stepper */

@@ -18,7 +18,11 @@
     <div class="store card">
         <a class="cancel" href="/users/{{../userId}}/stores/{{this._id}}/delete">X</a>
         <a href="/users/{{../userId}}/stores/{{this._id}}">
-        <img src = {{this.photoUrl}} alt="Image" class="indexfood">
+        {{#if this.photoUrl}}
+            <img src="{{this.photoUrl}}" alt="{{this.name}}'s photo"> {{else}}
+            <img src="http://assets.nydailynews.com/polopoly_fs/1.3738067.1515100640!/img/httpImage/image.jpg_gen/derivatives/index_450/foods-2018.jpg" alt="{{store.name}}'s photo"> {{/if}}
+        {{!-- <img src = {{this.photoUrl}} alt="Image" class="indexfood"> --}}
+          
             {{this.name}}
         </a>
        
