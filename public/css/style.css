@@ -9,7 +9,11 @@
 }
 
  .copyRight{
-  /* margin-top: 150px */
+  font-size: 12px;
+  margin-left: 5px; 
+  margin-top: 8px;
+  position:fixed;
+
  }
 body {
   background: ghostwhite;
