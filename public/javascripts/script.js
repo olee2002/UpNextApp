@@ -28,17 +28,10 @@ $(document).ready(() => {
             audio.play()
             audio.loop = true
             clearInterval(foodTimer)
-            $('#pause').css('display','flex')
+            $('#pause').css('display', 'flex')
         }
     }
-
-
-
     const foodTimer = setInterval(timeIt, 1000)
 
     $('#pause').on('click', () => { audio.pause() })
-
-
-
-
 })
